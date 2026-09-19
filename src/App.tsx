@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Editor from './pages/Editor';
 import Print from './pages/Print';
+import Consignment from './pages/Consignment';
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/editor/:id" element={<Editor />} />
         <Route path="/print/:id" element={<Print />} />
+        <Route path="/consignment" element={<Consignment />} />
       </Routes>
     </HashRouter>
   );

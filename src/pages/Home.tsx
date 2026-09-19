@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useChartStore } from '../store/chartStore';
 import { drawChartToCanvas } from '../utils/canvas';
 import { useEffect, useRef, useState } from 'react';
@@ -33,6 +33,22 @@ export default function Home() {
   return (
     <div style={{ padding: 24, maxWidth: 960, margin: '0 auto' }}>
       <h1 style={{ fontSize: 24, marginBottom: 16 }}>我的图解</h1>
+      <Link
+        to="/consignment"
+        style={{
+          display: 'inline-block',
+          marginBottom: 20,
+          padding: '10px 18px',
+          borderRadius: 8,
+          background: '#fff',
+          border: '1px solid #e0dcd5',
+          textDecoration: 'none',
+          color: '#333',
+          fontSize: 14,
+        }}
+      >
+        🧶 成品寄售对账 → 按月跟小店核账、分成、退货与店存
+      </Link>
       <div style={{ display: 'flex', gap: 12, marginBottom: 24, alignItems: 'center' }}>
         <input type="number" value={newCols} onChange={(e) => setNewCols(Number(e.target.value))} style={{ width: 70, padding: '6px 8px' }} placeholder="宽" />
         <span>×</span>
